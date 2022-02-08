@@ -15,7 +15,6 @@
 
 .afterhome{
 	position: relative;
-	z-index: 10;
 }
 
 
@@ -72,6 +71,15 @@
 	background: url("../images/GSB2.png");
 	background-size: cover;
 }
+.card_image#img7{
+	background: url("../images/golf.jpg");
+	background-size: cover;
+}
+.card_image#img8{
+	background: url("../images/flutter.jpg");
+	background-size: cover;
+}
+
 
 .card_text{
     grid-area: texte;
