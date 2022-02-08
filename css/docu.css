@@ -1,0 +1,97 @@
+.home{
+	font-size: 65px;
+	font-weight: 100;
+	line-height: 65px;
+	font-family: 'gotham', sans-serif;
+	color: #f3f4f6;
+}
+.home h1{
+	text-align: center;
+	padding-top: 16vh;
+	margin-bottom: 6vh;
+	z-index: 10;
+	position: relative;
+}
+
+.afterhome{
+	position: relative;
+	z-index: 10;
+}
+
+
+.accueil{
+	color: #000001;
+	padding-top: 2vh;
+	position: relative;
+	font-family: "open sans",sans-serif;
+    padding-bottom: 50px;
+}
+.accueil,.shape{
+	position: relative;
+	background-color: #f3f4f6;
+	top: 2vh;
+}
+.accueil h1{
+	font-weight: 700;
+	font-size: 28px;
+	margin-bottom: 40px;
+	text-align: center;
+	font-family: "albra",sans-serif;
+	letter-spacing: 1.3px;
+}
+
+.suite{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+    justify-content: center;
+    background-color: #f3f4f6;
+}
+
+.card_image#img1{
+    background: url("../docs/cv.png");
+    background-size: cover;
+}
+.card_image#img2{
+    background: url("../images/html.jpg");
+    background-size: cover;
+}
+.card_image#img3{
+    background: url("../images/cms.jpg");
+    background-size: cover;
+}
+.card_image#img4{
+    background: url("../images/cdc.jpg");
+    background-size: cover;
+}
+.card_image#img5{
+	background: url("../images/Linguist.png");
+	background-size: cover;
+}
+.card_image#img6{
+	background: url("../images/GSB2.png");
+	background-size: cover;
+}
+
+.card_text{
+    grid-area: texte;
+    margin: 25px;
+}
+@media all and (max-width:1620px){
+    .home h1{
+        font-size: 77px;
+    }
+}
+
+
+a[href="docu.html"]{
+	background: linear-gradient(to left, #fc6767, #ec008c);
+	-webkit-background-clip: text;
+	background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow:
+         0 0 50px #eeeeee20,            /* mid blanc */
+        -10px 0 30px #ec008c20,        /* gauche */
+         10px 0 30px #fc676720;         /* droite */
+	font-weight: bold;
+}

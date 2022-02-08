@@ -1,0 +1,122 @@
+.home{
+	font-size: 65px;
+	font-weight: 100;
+	line-height: 65px;
+	font-family: 'gotham', sans-serif;
+	color: #f3f4f6;
+}
+.home h1{
+	text-align: center;
+	padding-top: 16vh;
+	margin-bottom: 6vh;
+	z-index: 10;
+	position: relative;
+}
+
+.afterhome{
+	position: relative;
+	z-index: 10;
+}
+
+.accueil{
+	color: #000001;
+	padding-top: 2vh;
+	position: relative;
+	font-family: "open sans",sans-serif;
+	padding-bottom: 50px;
+}
+.accueil,.shape{
+	position: relative;
+	background-color: #f3f4f6;
+	top: 2vh;
+}
+.accueil h1, .matiere h2{
+	font-weight: 700;
+	font-size: 28px;
+	line-height: 44.8px;
+	margin-bottom: 40px;
+	text-align: center;
+	font-family: "albra",sans-serif;
+	letter-spacing: 1.3px;
+}
+
+.suite{
+	background: #f3f4f6;
+	padding: 1%;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+.suite h1, .matiere h1{
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 21px;
+	font-weight: 700;
+	line-height: 65px;
+	font-family: 'gotham', sans-serif;
+}
+.suite p,.suite ul{
+	font-size: 16px;
+    line-height: 25.6px;
+	font-weight: 700;
+	font-family: "montserrat2",sans-serif;
+	list-style-type: none;
+}
+.suite li{
+	border-left: 1px solid;
+	padding-left: 15px;
+	margin-top: 1.4vh;
+	margin-left: 45px;
+	border-color: #747474;
+}
+
+#sright,#sleft{
+	max-width: 80%;
+	margin: 0 auto;
+	padding: 1%;
+	margin-bottom: 75px;
+}
+#sleft p, #sright p{
+	width: 500px;
+	max-width: 80%;
+	margin: 0 auto;
+	padding: 1%;
+}
+
+#sright{
+	border: rgba(0, 0, 0, 0.78) 1px solid;
+	box-shadow:
+			6.7px 6.7px 5.3px rgba(0, 0, 0, 0.02),
+			22.3px 22.3px 17.9px rgba(0, 0, 0, 0.03),
+			100px 100px 80px rgba(0, 0, 0, 0.05);
+}
+
+
+@media all and (max-width:1050px){
+	.suite{
+		flex-direction: column;
+	}
+}
+a[href="sio.html"]{
+	background: linear-gradient(to left, #fc6767, #ec008c);
+	-webkit-background-clip: text;
+	background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow:
+         0 0 50px #eeeeee20,            /* mid blanc */
+        -10px 0 30px #ec008c20,        /* gauche */
+         10px 0 30px #fc676720;         /* droite */
+	font-weight: 900;
+}
+
+
+
+/*Sites utiles
+- Exemple app SIO: https://www.freshome.fr/documentations.html
+- Projet voiture:
+- Projet banque:
+- Site purple:
+- CV: https://www.freshome.fr/files/cv.pdf
+- Train flex: https://flexboxfroggy.com/#fr
+*/

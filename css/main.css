@@ -1,0 +1,165 @@
+
+.home h4{
+	font-family: 'Montserrat', sans-serif;
+	color: #f3f4f6;
+	font-size: 19px;
+	font-weight: 400;
+	line-height: 26px;
+}
+.home h1{
+	font-family: 'Montserrat', sans-serif;
+	color: #f3f4f6;
+	font-size: 65px;
+	font-weight: 100;
+	line-height: 65px; /* Définit la hauteure alouée pour une ligne de texte */
+	position: relative;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+.home span{
+	font-weight: 700;
+	color: #ec008c;
+}
+.home p{
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase; /* Convertit tout le texte en majuscule */
+	color: #f3f4f6;
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 26px;
+	position: relative;
+}
+.innerhome{
+	padding-top: 30vh;
+	margin-left: 5vw;
+	position: absolute;
+	z-index: 60;
+	display: flex;
+	flex-direction: column;
+	left: 0;
+}
+
+.accueil,.shape{
+	position: relative;
+	background-color: #f3f4f6;
+	top: 88vh;
+	z-index: 500;
+}
+
+.accueil{
+	color: #000001;
+	margin-top: 0vh;
+	padding-top: 2vh;
+	padding-left: 10rem;
+	z-index: 4;
+}
+.accueil h1{
+	font-family: "albra",sans-serif;
+	font-weight: 300;
+	font-size: 28px;
+	padding-bottom: 20px;
+}
+.accueil h3{
+	font-size: 16px;
+    line-height: 25.6px;
+    font-weight: 400;
+	font-family: "open sans",sans-serif;
+	max-width: 30em; /* Largeur maximale */
+	text-align: left; /* Aligne le texte du côté gauche */
+	z-index: 505;
+}
+#contactwrap{
+	float: right; /* Fait flotter les éléments sur la gauche */
+	margin-right: 10rem;
+	margin-bottom: 50px;
+}
+#spancontact{
+	color: #7b57f0;
+	font-family: "gotham";
+	font-size: 15px;
+	font-weight: 700;
+}
+.mailinput{
+	all: unset;			/* Enlève tout les éléments de style appliqués auparavant */
+	color: #000001;
+	font-size: 13.333px;
+	font-family: "calibri";
+	letter-spacing: 1px;	/* Espace entre les lettres */
+	padding: 24px 40px 23px 40px;
+	border-top-left-radius: 30px;
+	border-bottom-left-radius: 30px;
+	text-align: left;
+	background-color: #f3f4f6;
+}
+.contactbutton{
+	all: unset;
+	cursor: pointer;
+	font-family: "montserrat";
+	font-weight: 500;
+	font-size: 13.333px;
+	color: #f3f4f6;
+	outline: none;
+	padding: 25px 20px 25px 240px;
+	border-radius: 30px;
+	background: linear-gradient(100deg,#ab6bff 0%,#9ad5f9 33%,#575df0 66%,#ab6bff 100%);
+	text-align: right;
+	-webkit-user-select: none;
+}
+.contactbutton a{
+	text-decoration: none;
+	color: #f3f4f6;
+}
+.gradientmail{
+	position: absolute;
+	padding: 1px;
+}
+.gradientmail,.contactbutton{
+	background-size: 200% 100%;	/* Taille de l'arrière-plan */
+	/* Relié à la keyframe "gradientbutton" / durée de l'effet / se répète de façon linéaire indéfiniment */
+	-webkit-animation: gradientbutton 12.5s linear infinite; 
+	animation: gradientbutton 12.5s linear infinite;
+
+	text-transform: uppercase;
+}
+/* Définit les positions de l'arrière-plan, et donc des couleurs, en fonction du temps de l'animation en % */
+@keyframes gradientbutton {
+	0% {
+		background-position: 93% 0%; /* Début de l'animation */
+    }
+    50% {
+        background-position: 0% 0%; /* Milieu de l'animation */
+    }
+    100% {
+        background-position: 93% 0%; /* Fin de l'animation */
+    }
+}
+
+.fondunoir{
+	animation: fondu ease-in 1.2s;
+	-webkit-animation: fondu ease-in 1.2s linear infinite;
+}
+@keyframes fondu {
+	0% {
+	  opacity:0;
+	}
+	100% {
+	  opacity:1;
+	}
+}
+
+@media all and (max-width:768px){
+	.home img{
+		height: 100vh;
+	}
+}
+a[href="main.html"]{
+	background: linear-gradient(to left, #fc6767, #ec008c);
+	-webkit-background-clip: text;
+	background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow:
+         0 0 50px #eeeeee20,            /* mid blanc */
+        -10px 0 30px #ec008c20,        /* gauche */
+         10px 0 30px #fc676720;         /* droite */
+	font-weight: bold;
+}

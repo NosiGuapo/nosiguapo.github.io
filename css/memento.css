@@ -1,0 +1,90 @@
+.home{
+	font-size: 65px;
+	font-weight: 100;
+	line-height: 65px;
+	font-family: 'gotham', sans-serif;
+	color: #f3f4f6;
+}
+.home h1{
+	text-align: center;
+	padding-top: 16vh;
+	margin-bottom: 6vh;
+	z-index: 10;
+	position: relative;
+}
+
+.afterhome{
+	position: relative;
+	z-index: 10;
+}
+
+.accueil{
+	color: #000001;
+	padding-top: 2vh;
+	position: relative;
+	font-family: "open sans",sans-serif;
+    padding-bottom: 50px;
+    height: 60vh;
+}
+.accueil,.shape{
+	position: relative;
+	background-color: #f3f4f6;
+	top: 2vh;
+	height: 1425px;
+}
+.accueil h1{
+	font-weight: 700;
+	font-size: 28px;
+	line-height: 44.8px;
+	margin-bottom: 40px;
+	text-align: center;
+	font-family: "albra",sans-serif;
+	letter-spacing: 1.3px;
+}
+.tabcontent{
+	display: flex;
+	justify-content: center;
+}
+.tablememento{
+	border-collapse: collapse;
+	margin: 25px 0;
+	font-size: 0.9em;
+	min-width: 400px;
+	border-radius: 5px 5px 0 0;
+	overflow: hidden;
+}
+.tablememento thead{
+	background: linear-gradient(100deg,#575df0 0%,#ab6bff 100%);
+	color: #f3f4f6;
+}
+.tablememento thead th{
+	padding: 15px 20px;
+	text-align: center;
+	text-transform: uppercase;
+}
+.tablememento tbody tr{
+	border-bottom: 1px solid #ab6bff;
+	background-color: #f3f4f6;
+}
+.tablememento tbody tr:nth-of-type(even){ /* Séléctionne une ligne sur deux */
+	background-color: #f7f0ff;
+}
+.tablememento tbody tr:last-of-type{ /* Séléctionne la dernierre ligne */
+	border-bottom: 4px solid #575df0;
+}
+.tablememento td{
+	padding: 12px 15px;
+	font-family: "Montserrat2";
+	font-weight: 700;
+}
+a[href="memento.html"]{
+	background: linear-gradient(to left, #fc6767, #ec008c);
+	-webkit-background-clip: text;
+	background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow:
+         0 0 50px #eeeeee20,            /* mid blanc */
+        -10px 0 30px #ec008c20,        /* gauche */
+         10px 0 30px #fc676720;         /* droite */
+	font-weight: bold;
+}

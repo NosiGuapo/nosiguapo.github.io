@@ -1,0 +1,305 @@
+/* Permet d'importer une police d'écriture provenant d'un app */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,200&display=swap');
+@import url("https://letter.co/static/fonts/NeufileGrotesk-RegularExtended.woff2");
+/* Permet d'importer une police d'écriture provenant d'un fichier local */
+@font-face{
+	src: url("../fonts/trajan.ttf");
+	font-family: "trajan";
+}
+@font-face{
+	src: url("../fonts/calibril.ttf");
+	font-family: "calibri";
+}
+@font-face{
+	src: url("../fonts/montserrat.woff");
+	font-family: "montserrat2";
+}
+@font-face{
+	src: url("../fonts/gotham.woff");
+	font-family: "gotham";
+}
+
+@font-face{
+	src: url("../fonts/albra_light.otf");
+	font-family: "albra";
+}
+::selection{ /* Lors de la séléction d'un élément */
+	color: #ec008c; /* Change la couleur du texte */
+	background-color: transparent; /* Rend l'arrière plan, normalement bleu pour la séléction, invisible */
+}
+html, body{
+	background-color: #09090c; /* Définit une couleur d'arrière plan */
+	/* Permet de coller tout les éléments de la page aux bordures de la page */
+	box-sizing: border-box; 
+	padding: 0;
+	margin: 0;
+}
+a{
+    text-decoration: none; /* Supprime les décorations alouées automatiquement aux liens */
+}
+
+.underline{
+    top: 80px; /* Position d'un élément par rapport au haut de la page */
+    left: 0; /* Position d'un élément par rapport à la gauche de la page */
+    right: 0; /* Position d'un élément par rapport à la droite de la page */
+    position: fixed; /* L'élément restera fixé à sa position, il ne bougera pas et restera constamment à l'écran */
+    z-index: 100; /* Définit l'axe z, c'est à dire l'avancement et la superposition sur le plan z d'un élément par rapport à un autre */
+    background: linear-gradient(to left, #fc6767, #ec008c); /* Arrière-plan avec dégradé linéaire, de gauche à droite */
+    height: 2px; /* Hauteur d'un élément */
+}
+header{
+    position: fixed;
+    height: 80px;
+    width: 100%; /* Largeur d'un élément */
+    display: flex;
+    align-items: center; /* Aligne les éléments au milieu */
+    background-color: #18181f;
+    z-index: 400;
+    /* Ajoute une ombre autour d'un élément */
+    -webkit-box-shadow: 0px 13px 55px 2px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 13px 55px 2px rgba(0,0,0,0.15);
+    box-shadow: 0px 13px 55px 2px rgba(0,0,0,0.15);
+    overflow: hidden; /* Permet de masquer une partie d'un élément si elle déborde de son parent */
+}
+header ul div{
+    display: inline; /* Aligne les objets */
+}
+header button{
+    cursor: pointer; /* Fait que le curseur prendra la forme désirée (pointeur ici) */
+    background-color: transparent;
+    color: #f3f4f6; /* Couleur du texte */
+    outline: none;  /* Masque les bordures d'un élément, qui apparaissent parfois lorsque l'utilisateur clique sur un bouton ou un lien*/
+}
+header a{
+    text-decoration: none;
+    color: #f3f4f6;
+}
+
+header li{
+    display: inline-block;
+    transition: all 0.3s ease 0s; /* Permet de définir: Sur quel type d'élément la transition va s'appliquer / La durée / Des effets ou paramètres supplémentaires */
+    font-family: "Montserrat2"; /* Définit la police d'écriture */
+    font-size: 17px; /* Définit la taille des lettres */
+    font-weight: bold; /* Définit le poid des lettres, par unitées numériques ou autres, ici en gras */
+    padding-left: 2.5vw; /* Décalage interne vers la gauche */
+    -webkit-user-select: none; /* Empeche l'utilisateur de séléctionner un élément */
+}
+header li:hover{
+    margin-left: 1.2vh; /* Décalage externe vers la gauche */
+}
+.graffect li:hover{ /* Lorsque la souris passe par dessus un élément */
+    font-size: 18px;
+    background: linear-gradient(to left, #fc6767, #ec008c);
+    /* L'arrière-plan est attribué au texte */
+    -webkit-background-clip: text;
+    background-clip: text; 
+    -webkit-text-fill-color: transparent; /* Rend le texte transparent */
+    text-shadow:                        /* Permet de mettre une ombre ou une couleur autour d'un texte */
+         0 0 50px #eeeeee20,            /* mid blanc */
+        -10px 0 30px #ec008c70,        /* gauche */
+         10px 0 30px #fc676770;         /* droite */
+}
+.graffect li:active{ /* Lorsque l'on clique ou qu'on visite un lien */
+    text-shadow:
+       0 0 50px #eeeeee25,            /* mid blanc */
+       -10px 0 30px #fc676785,        /* gauche */
+        10px 0 30px #ec008c85;         /* droite */
+}
+
+
+header .hcbutton{
+    border-image-source: linear-gradient(to left, #fc6767, #ec008c);
+    border-image-slice: 1; /* Taille de la bordure */
+    padding: 9px 10px; /* Décalage interne */
+    transition: all 0.4s ease;
+}
+
+header .hcbutton:hover{
+    background: linear-gradient(to left, #fc6767, #ec008c);
+    box-shadow:
+        0 0 50px #eeeeee17,            /* mid blanc */
+        -10px 0 30px #ec008c50,        /* gauche */
+         10px 0 30px #fc676750;         /* droite */
+}
+header .hcbutton:active{
+    border-image-source: linear-gradient(to right, #fc6767, #ec008c);
+    background: linear-gradient(to right, #fc6767, #ec008c);
+    box-shadow:
+        0 0 50px #eeeeee23,            /* outer white */
+         10px 0 30px #ec008c60,        /* outer left magenta */
+        -10px 0 30px #fc676760;         /* outer right cyan */
+}
+.burgercheckbox{
+    display: none; /* Masque un élément */
+}
+
+@media all and (max-width:768px){ /* Effectue les changements présents uniquement si la largeur de la fenêtre est inférieure à 760 pixels */
+    #burger-logo{
+        position: fixed; 
+        top: 2.5vh; 
+        left: 2.5vw;
+        z-index: 400;
+    }
+    .burgercheckbox{
+        position: fixed;
+        display: block;
+        cursor: pointer;
+        z-index: 800;
+        top: 1.5vh; 
+        width: 50px;
+        height: 25px;
+        opacity: 0; /* Donne une opacité nulle a un élément */
+    }
+    #burger-logo div{
+      width: 33px;
+      height: 4px;
+      margin-bottom: 5px;
+      position: relative;
+      background-color: #f3f4f6;
+      border-radius: 2px; /* Définit l'angle des côtés de la bordure  */
+      z-index: 1;
+      transform-origin: 4px 0px;
+      box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+      transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0), /* Gère les transitions pour les div du hamburger */
+                  background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                  opacity 0.55s ease;
+    }
+
+
+    /* Animation */
+    .burgercheckbox:checked ~ #burger-logo > div{
+        transform: rotate(-45deg) translate(0, -2px); /* Effectue une rotation a 45 degrés de la premiere barre */
+    }
+    .burgercheckbox:checked ~ #burger-logo > div:nth-last-child(2){
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);    /* Fait disparaitre la deuxieme barre, tout en la faisant reculer */
+    }
+    .burgercheckbox:checked ~ #burger-logo > div:nth-last-child(3){
+        transform: rotate(45deg) translate(0, -2px); /* Effectue une rotation a 45 degrés de la troisième barre */
+    }
+
+    header{
+        position: fixed;
+        top: 0;
+        height: 100%;
+        width: 250px;
+        align-items: flex-start; /* Aligne les éléments à partir du début */
+        left: -260px;
+        z-index: 350;
+        transition: 0.35s;
+    }
+    header ul{
+        padding: 0;
+        margin-top: 6vh;
+    }
+    header li{
+        display: flex;
+        flex-direction: column; /* Oriente les éléments en colonne */
+        padding: 22px 0;
+        margin-left: 2.5vw;
+    }
+    .burgercheckbox:checked ~ header{
+        left: 0;
+        transition: 0.3s;
+    }
+
+    .underline{
+        display: none;
+    }
+}
+
+/* Partie presets: regroupe les éléments css qui sont communs à plusieurs pages, pour éviter la répétition */
+
+.card{
+    position: relative;
+    top: 0;
+    z-index: 100;
+    display: grid; /* Mode d'affichage par zone */
+    width: 330px;
+    grid-template-columns: 330px; /* Taille de chaque carte */
+    grid-template-rows: 210px 150px 80px; /* Taille alouée pour chaque zone */
+    font-weight: 700;
+    text-align: center;
+    border-radius: 18px;
+    background: #f3f4f6;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+    grid-template-areas: "image" "texte" "boutton"; /* Nom des différentes zones de la grille */
+    margin: 20px 50px 100px 50px;
+    transition: all 0.2s ease-out;
+}
+.card_image{
+    grid-area: image; /* Associe à la zone mentionnée dans le grid-template-area */
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.card_text{
+    grid-area: texte;
+    margin: 25px;
+}
+.card_text h1{
+    font-family: "gotham";
+    font-size: 28px;
+    color: #000001;
+    font-weight: 100;
+}
+.card_text h2{
+    color: gray;
+    font-size: 15px;
+    font-family: "Montserrat2";
+    font-weight: 700;
+}
+.card_text h3{
+    font-size: 13px;
+    background: linear-gradient(100deg,#575df0 0%,#ab6bff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.card_button a{
+    grid-area: boutton;
+    background: linear-gradient(100deg,#575df0 0%,#ab6bff 100%);
+    padding: 15px;
+    color: #f3f4f6;
+    border-radius: 8px;
+    transition: background 0.5s ease-in-out;
+    font-family: "Montserrat2", sans-serif;
+    font-weight: bold;
+}
+.card:hover{
+    transform: translateY(-10px);   /* Fait monter la carte de 10px si on la survole */
+}
+.card:hover .card_image{
+    filter: brightness(70%);    /* Filtre qui baisse la luminosité de 30% */
+    transition: all .2s ease-in-out;
+}
+.card_image{
+    transition: all .3s ease-out;
+}
+
+
+.home .img{
+    position: fixed;
+	background-image: url(../images/invision.png); /* Permet d'incruster une image sur le fond d'écran */
+	background-size: cover; /* L'image recouvrira l'espace */
+	background-repeat: no-repeat; /* Fait que l'image ne se répète pas */
+    width: 100%;
+	height: 100%;
+}
+.shape{
+	height: 7vh;
+    border-radius: 85% 85% 0 0;
+    z-index: 5;
+}
+
+.accueil p{
+	font-size: 16px;
+    line-height: 25.6px;
+	font-weight: 400;
+	margin: 0 15vw 0 15vw;
+	text-align: center;
+	font-weight: 700;
+	font-family: "montserrat2",sans-serif;
+}
+
+
