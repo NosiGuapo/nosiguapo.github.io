@@ -194,6 +194,10 @@ html, body{
 /*	margin-right: 40px;*/
 /*}*/
 
+iframe::-webkit-scrollbar {
+	display: none;
+}
+
 a[href="cv.html"]{
 	background: linear-gradient(to left, #fc6767, #ec008c);
 	-webkit-background-clip: text;
