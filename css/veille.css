@@ -67,7 +67,7 @@ a[href="veille.html"]{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding-top: 95px;
+	padding-top: 75px;
 }
 
 
@@ -86,7 +86,7 @@ a[href="veille.html"]{
 	box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
 	grid-template-areas: "image" "texte" "boutton"; /* Nom des différentes zones de la grille */
 	margin: 20px 50px 100px 50px;
-	transition: all 0.2s ease-out;
+	transition: all 0.25s ease-out;
 }
 .veille_card_image{
 	border-top-left-radius: 15px;
@@ -96,6 +96,10 @@ a[href="veille.html"]{
 	grid-area: texte;
 	margin: 15px 20px;
 	text-align: left;
+}
+
+.veille_card span{
+	color: #7b57f0;
 }
 
 .veille_card_image a{
@@ -121,12 +125,23 @@ a[href="veille.html"]{
 	color: #fff;
 	line-height: 50px;
 	margin-bottom: 0;
+	transition: color 0.5s ease;
+}
+
+.veille_title:hover{
+	color: #beb2e7;
 }
 
 .veille_consult{
 	font-family: "Montserrat", sans-serif;
 	font-size: 15px;
 	color: rgba(243, 244, 246, 0.85);
+	transition: all 0.25s ease;
+}
+
+.veille_consult:hover{
+	color: #fff;
+	padding-left: 3px;
 }
 
 
@@ -140,12 +155,24 @@ a[href="veille.html"]{
 .veille_card_text h3{
 	margin-top: 25px;
 	font-family: "Montserrat2", sans-serif;
-	font-size: 18px;
+	font-size: 14px;
+	line-height: 26px;
 }
 
 
 #veille_img1{
 	background: url("../docs/Veille/dataspell.png");
+	background-size: cover;
+}
+
+#veille_img2{
+	background: url("../docs/Veille/ssh.png");
+	background-size: cover;
+	filter: brightness(45%) !important;
+}
+
+#veille_img3{
+	background: url("../docs/Veille/flutter.png");
 	background-size: cover;
 }
 
@@ -162,5 +189,5 @@ a[href="veille.html"]{
 }
 
 .veille_card:hover{
-	transform: translateY(-10px);   /* Fait monter la carte de 10px si on la survole */
+	transform: translateY(-7px);   /* Fait monter la carte de 10px si on la survole */
 }
