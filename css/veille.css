@@ -44,7 +44,6 @@
 .accueil div{
 	font-size: 16px;
 	line-height: 25.6px;
-	font-weight: 400;
 	margin: 0 15vw 0 15vw;
 	text-align: center;
 	font-weight: 700;
@@ -61,4 +60,106 @@ a[href="veille.html"]{
         -10px 0 30px #ec008c20,        /* gauche */
          10px 0 30px #fc676720;         /* droite */
 	font-weight: bold;
+}
+
+.suite{
+	background-color: #f3f4f6;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+
+.veille_card{
+	position: relative;
+	top: 0;
+	z-index: 100;
+	display: grid; /* Mode d'affichage par zone */
+	width: 675px;
+	grid-template-columns: 675px; /* Taille de chaque carte */
+	grid-template-rows: 320px 350px; /* Taille alouée pour chaque zone */
+	font-weight: 700;
+	text-align: center;
+	border-radius: 18px;
+	background: #f3f4f6;
+	box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
+	grid-template-areas: "image" "texte" "boutton"; /* Nom des différentes zones de la grille */
+	margin: 20px 50px 100px 50px;
+	transition: all 0.2s ease-out;
+}
+.veille_card_image{
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+}
+.veille_card_text{
+	grid-area: texte;
+	margin: 15px 20px;
+	text-align: left;
+}
+
+.veille_card_image a{
+	/*grid-area: image;*/
+	position: absolute;
+	margin-left: 20px;
+	z-index: 990;
+	text-align: left;
+	left: 0;
+}
+
+.veille_card_image a:first-child{
+	top: -10px;
+}
+
+.veille_card_image a:last-of-type{
+	top: 40%;
+}
+
+.veille_title{
+	font-family: "gotham", sans-serif;
+	font-size: 35px;
+	color: #fff;
+	line-height: 50px;
+	margin-bottom: 0;
+}
+
+.veille_consult{
+	font-family: "Montserrat", sans-serif;
+	font-size: 15px;
+	color: rgba(243, 244, 246, 0.85);
+}
+
+
+.veille_card_text h2{
+	color: gray;
+	font-size: 15px;
+	font-family: "Montserrat2", sans-serif;
+	font-weight: 700;
+}
+
+.veille_card_text h3{
+	margin-top: 25px;
+	font-family: "Montserrat2", sans-serif;
+	font-size: 18px;
+}
+
+
+#veille_img1{
+	background: url("../docs/Veille/dataspell.png");
+	background-size: cover;
+}
+
+
+.veille_img{
+	position: absolute;
+	grid-area: image; /* Associe à la zone mentionnée dans le grid-template-area */
+	width: 100%;
+	height: 100%;
+	z-index: 120;
+	filter: brightness(60%);
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+}
+
+.veille_card:hover{
+	transform: translateY(-10px);   /* Fait monter la carte de 10px si on la survole */
 }
