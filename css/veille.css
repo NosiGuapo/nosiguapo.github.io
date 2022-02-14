@@ -129,7 +129,7 @@ a[href="veille.html"]{
 }
 
 .veille_title:hover{
-	color: #beb2e7;
+	color: #a894ee;
 }
 
 .veille_consult{
@@ -176,6 +176,15 @@ a[href="veille.html"]{
 	background-size: cover;
 }
 
+#veille_img4{
+	background: url("../docs/Veille/fleet.png");
+	background-size: cover;
+}
+
+#veille_img5{
+	background: url("../docs/Veille/teamcity.png");
+	background-size: cover;
+}
 
 .veille_img{
 	position: absolute;
