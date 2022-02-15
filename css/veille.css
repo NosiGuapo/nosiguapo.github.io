@@ -67,7 +67,7 @@ a[href="veille.html"]{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding-top: 75px;
+	padding-top: 230px;
 }
 
 
@@ -85,9 +85,18 @@ a[href="veille.html"]{
 	background: #f3f4f6;
 	box-shadow: 5px 5px 15px rgba(0,0,0,0.2);
 	grid-template-areas: "image" "texte" "boutton"; /* Nom des différentes zones de la grille */
-	margin: 20px 50px 100px 50px;
+	margin: 20px 50px 170px 50px;
 	transition: all 0.25s ease-out;
 }
+
+.veille_card:nth-child(even){
+	margin-left: 120px;
+}
+
+.veille_card:nth-child(odd){
+	margin-right: 120px;
+}
+
 .veille_card_image{
 	border-top-left-radius: 15px;
 	border-top-right-radius: 15px;
@@ -183,6 +192,11 @@ a[href="veille.html"]{
 
 #veille_img5{
 	background: url("../docs/Veille/teamcity.png");
+	background-size: cover;
+}
+
+#veille_img6{
+	background: url("../docs/Veille/top.png");
 	background-size: cover;
 }
 
