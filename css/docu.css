@@ -79,6 +79,10 @@
 	background: url("../images/flutter.jpg");
 	background-size: cover;
 }
+.card_image#img9{
+    background: url("../images/portfolio.png");
+    background-size: cover;
+}
 
 
 .card_text{
